@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <title>OMAP Enrollment</title>
+
+	<!--   <meta name="viewport" content="width=device-width"> -->
+
+    <link href="style.css" rel="stylesheet">
+
+  	<script src="js/modernizr-2.5.3.min.js"></script>
+
+  </head>
+  <body>
+	<div class="container">	   
+	<form action="" id="contact-form" class="form-horizontal">
+	<fieldset>
+		<legend> <h1>OMAP Enrollment</h1></legend>
+
+		<div class="control-group">
+			<label class="control-label" for="name">First Name</label>
+				<div class="controls"> 
+				<input type="text" class="input-xlarge" name="firstname" id="firstname">
+				</div> 
+		</div>
+		<div class="control-group">
+		<label class="control-label" for="name">Last Name</label>
+		<div class="controls">
+		<input type="text" class="input-xlarge" name="lastname" id="lastname">
+		</div>
+		</div>
+		<div class="control-group">
+		<label class="control-label" for="name">Your Company Name</label>
+		<div class="controls">
+		<input type="text" class="input-xlarge" name="companyname" id="companyname">
+		</div>
+		</div>
+		<div class="control-group">
+		<label class="control-label" for="email">Company Email Address</label>
+		<div class="controls">
+		<input type="text" class="input-xlarge" name="email" id="email">
+		</div>
+		</div>
+		<div class="control-group" >
+			<!-- <label> -->
+			Is your company a member of the Jumpstart program?<!-- </label> -->
+				<input name="isJump" type="radio" value="1" onclick="showhidediv(this);"/>Yes 
+				<input name="isJump" type="radio" value="2"  onclick="showhidediv(this);"/>No<br>
+			<div id="jumptext" class="control-group" style="display:none;"  >
+			<label>Jumpstart/MDA OEM Partner Account You Are Associated With</label>
+			<input class="form-control">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="message">OEM Microsoft Account Marketing Manager</label>
+			<div class="controls">
+				<textarea class="input-xlarge" name="message" id="message" rows="3"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+		<label class="control-label" for="message">Additional Information (optional)</label>
+		<div class="controls">
+		<textarea class="input-xlarge" name="addinfo" id="addinfo" rows="3"></textarea>
+		</div>
+		</div>
+		<div class="form-group">
+		<label>
+			I accept the terms and conditions of the
+				<a href="http://oem.microsoft.com/public/OEMMarketingAssetsPortal/OMAP_End_User_Licensing_Agreement.pdf">
+			End User Licensing Agreement</a> (Yes or No)?
+		</label>
+		<div class="controls">
+			<!-- <label class="radio-inline"> -->
+				<input type="radio" name="optionsRadiosInline" id="EULAYes" value="EULAYes" checked=""> Yes
+			<!-- </label>
+			<label class="radio-inline"> -->
+				<input type="radio" name="optionsRadiosInline" id="EULANo" value="EULANo"> No
+			<!-- </label> -->
+		</div>
+		</div>
+		<div class="form-actions">
+		<button type="submit" class="btn btn-primary btn-large" id="btnsubmit">Submit</button> 
+		<!-- 			 <button type="button" class="btn btn-primary btn-large" id="btnSubmit" name="btnSubmit">Submit</button> -->
+		</div>
+	</fieldset>
+	</form>
+			</div><!-- .row -->
+
+      <hr>
+
+    </div> <!-- .container -->
+
+<!-- ==============================================
+		 JavaScript below! 															-->
+
+<!-- jQuery via Google + local fallback, see h5bp.com -->
+	  <script src="assets/js/jquery-1.7.1.min.js"></script>
+
+<!-- Bootstrap JS -->
+	  <script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Validate plugin -->
+		<script src="assets/js/jquery.validate.min.js"></script>
+
+<!-- Prettify plugin -->
+		<script src="assets/js/prettify/prettify.js"></script>
+
+<!-- Scripts specific to this page -->
+		<script src="script.js"></script>
+
+<!-- 		<script>
+			// Activate Google Prettify in this page
+				addEventListener('load', prettyPrint, false);
+
+			$(document).ready(function(){
+
+				// Add prettyprint class to pre elements
+					$('pre').addClass('prettyprint linenums');
+
+			});
+
+		</script> -->
+		<script language="JavaScript" type="text/javascript">
+function showhidediv( rad )
+    {
+        var rads = document.getElementsByName( rad.name );
+        document.getElementById( 'jumptext' ).style.display = ( rads[0].checked ) ? 'block' : 'none';
+    }
+</script>
+  </body>
+</html>
