@@ -7,7 +7,7 @@
 
     <link href="style.css" rel="stylesheet">
 
-  	<script src="js/modernizr-2.5.3.min.js"></script>
+  	<!-- <script src="js/modernizr-2.5.3.min.js"></script> -->
 
   </head>
   <body>
@@ -41,13 +41,13 @@
 		</div>
 		</div>
 		<div class="control-group" >
-			<!-- <label> -->
-			Is your company a member of the Jumpstart program?<!-- </label> -->
+			<label> 
+			Is your company a member of the Jumpstart program?
 				<input name="isJump" type="radio" value="1" onclick="showhidediv(this);"/>Yes 
 				<input name="isJump" type="radio" value="2"  onclick="showhidediv(this);"/>No<br>
 			<div id="jumptext" class="control-group" style="display:none;"  >
-			<label>Jumpstart/MDA OEM Partner Account You Are Associated With</label>
-			<input class="form-control">
+			 <label class="control-label" for="subject">Jumpstart/MDA OEM Partner Account You Are Associated With</label>
+			<div class="controls"><input type="text" class="input-xlarge" name="subject" id="subject"></div>
 			</div>
 		</div>
 		<div class="control-group">
