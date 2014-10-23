@@ -12,9 +12,9 @@
 
 		<div class="control-group">
 			<label class="control-label" for="name">First Name</label>
-				<div class="controls"> 
-				<input type="text" class="input-xlarge" name="firstname" id="firstname">
-				</div> 
+			<div class="controls"> 
+			<input type="text" class="input-xlarge" name="firstname" id="firstname">
+			</div> 
 		</div>
 		<div class="control-group">
 		<label class="control-label" for="name">Last Name</label>
@@ -63,21 +63,16 @@
 			End User Licensing Agreement</a> (Yes or No)?
 		</label>
 		<div class="controls">
-			<!-- <label class="radio-inline"> -->
-				<input type="radio" name="optionsRadiosInline" id="EULAYes" value="EULAYes" checked=""> Yes
-			<!-- </label>
-			<label class="radio-inline"> -->
-				<input type="radio" name="optionsRadiosInline" id="EULANo" value="EULANo"> No
-			<!-- </label> -->
+			<input type="radio" name="optionsRadiosInline" id="EULAYes" value="EULAYes"> Yes
+			<input type="radio" name="optionsRadiosInline" id="EULANo" value="EULANo" checked=""> No
 		</div>
 		</div>
 		<div class="form-actions">
-		<button type="submit" class="btn btn-primary btn-large" id="btnsubmit">Submit</button> 
-		<!-- 			 <button type="button" class="btn btn-primary btn-large" id="btnSubmit" name="btnSubmit">Submit</button> -->
+		<button type="submit" class="btn btn-primary btn-large" id="btnsubmit" disabled="disabled">Submit</button> 
 		</div>
 	</fieldset>
 	</form>
-			</div><!-- .row -->
+	</div><!-- .row -->
 
       <hr>
 
@@ -105,5 +100,6 @@ function showhidediv( rad )
         document.getElementById( 'jumptext' ).style.display = ( rads[0].checked ) ? 'block' : 'none';
     }
 </script>
+
   </body>
 </html>

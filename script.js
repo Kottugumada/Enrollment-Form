@@ -38,5 +38,12 @@ $(document).ready(function(){
 				.closest('.control-group').removeClass('error').addClass('success');
 			}
 	  });
+	  $('#contact-form input').on('keyup blur', function () {
+        if ($('#contact-form').valid()) {
+            $('button.btn').prop('disabled', false);
+        } else {
+            $('button.btn').prop('disabled', 'disabled');
+        }
+    });
 
 }); // end document.ready
